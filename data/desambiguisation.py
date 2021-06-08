@@ -77,8 +77,9 @@ def Extract_longlat_WikiData (List_Q_code):
     list_long=[]
     
     for Q_code in List_Q_code:
-        if Q_code is None:
-            pass
+        if type(Q_code) == float:
+            list_lat.append(None)
+            list_long.append(None)
         else:
             q_dict = get_entity_dict_from_api(Q_code)
 

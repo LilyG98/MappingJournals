@@ -106,30 +106,9 @@ def Extract_longlat_WikiData (List_Q_code):
     #Vérifier la taille des listes pour se prémunir d'un 
     print("Avant correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
     
-    #Si une liste a seulement une des deux valeurs 
-    lengthDiff=abs(len(list_long)-len(list_lat))
-    
-    if len(list_long) > len(list_lat):
-        list_lat += list(np.empty(shape = (lengthDiff)))
-
-    elif len(list_long) < len(list_lat):
-        list_long += list(np.empty(shape = (lengthDiff)))
-
-    else:
-        pass
-    
-    
-    #S'il y a une différence entre les listes long/lat et la list des Qcodes
-    lengthDiff2 = abs(len(list_long)-len(List_Q_code))
-    
-    if len(list_long) > len(List_Q_code):
-        List_Q_code += list(np.empty(shape = (lengthDiff)))
-
-    elif len(list_long) < len(List_Q_code):
-        L_NotMatch += list(np.empty(shape = (lengthDiff)))
-
-    else:
-        pass
+    #Ily a une différence de taille entre list_long/list_lat et List_Q_code     
+    list_long=list_long.append("0")
+    list_lat=list_lat.append("0")
     
     print("Après correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
     

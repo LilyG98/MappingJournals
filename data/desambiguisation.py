@@ -85,19 +85,54 @@ def Extract_longlat_WikiData (List_Q_code):
 
 
             if "P625"in q_dict["claims"] : #Si l'entité a des coordonnées
-                #Latitude
-                q_latitude = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
-                list_lat.append(q_latitude)
+                
+                try:#Réponse à un message d'erreur "KeyError: 'datavalue' python"
+                    x = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
 
-                #Longitude:
-                q_longitude= q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['longitude']
-                list_long.append(q_longitude)
+                    #Latitude
+                    q_latitude = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
+                    list_lat.append(q_latitude)
 
+                    #Longitude:
+                    q_longitude= q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['longitude']
+                    list_long.append(q_longitude)
+
+                except KeyError:
+                    pass
             else:
                 list_lat.append(None)
-                list_long.append(None)
-    #             print("l'entité",Q_code,"n'a pas de coordonnées. value None ajoutée")
+                list_long.append(None) 
 
+    #Vérifier la taille des listes pour se prémunir d'un 
+    print("Avant correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
+    
+    #Si une liste a seulement une des deux valeurs 
+    lengthDiff=abs(len(list_long)-len(list_lat))
+    
+    if len(list_long) > len(list_lat):
+        list_lat += list(np.empty(shape = (lengthDiff)))
+
+    elif len(list_long) < len(list_lat):
+        list_long += list(np.empty(shape = (lengthDiff)))
+
+    else:
+        pass
+    
+    
+    #S'il y a une différence entre les listes long/lat et la list des Qcodes
+    lengthDiff2 = abs(len(list_long)-len(List_Q_code))
+    
+    if len(list_long) > len(List_Q_code):
+        List_Q_code += list(np.empty(shape = (lengthDiff)))
+
+    elif len(list_long) < len(List_Q_code):
+        L_NotMatch += list(np.empty(shape = (lengthDiff)))
+
+    else:
+        pass
+    
+    print("Après correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
+    
     # #création d'un df qui rassemble toutes les infos voulues et que l'on pourra merge par Q_code :
     df=pd.DataFrame({"Q_code":List_Q_code,"latitude":list_lat,"longitude":list_long})
     return df    

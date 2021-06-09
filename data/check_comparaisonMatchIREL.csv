@@ -50,85 +50,65 @@
 48,Tonkin,mer rouge
 49,Toulon,océan Atlantique
 50,Extrême-Orient,océan indien
-51,Méditerranée,Afrique occidentale française
-52,Abyssinie,Androy
-53,Afrique,Anjouan
-54,Algérie,Annam
-55,Amérique,Annamite
-56,Antilles,Annamites
-57,Baoulé,Antsirane
-58,Barbade,Bahr-el-Ghazal
-59,Battambang,Bambaras
-60,Bengale,Bras-de-Pontho
-61,Bokoro,Bridgetown
-62,Bruxelles,Calédonie
-63,Cambodge,Choquan
-64,Canton,Cochinchine
-65,Cayenne,Congo français
-66,Chandernagor,Croyances
-67,Chine,Côte-d'Ivoire
-68,Cholon,Dahomey
-69,Conakry,Diégo-Suarez
-70,Congo,Fouta-Djallon
-71,Constantine,Grande-Comore
-72,Corse,Guinée Française
-73,Cuba,Guinée Française
-74,Côte d'Ivoire,Hatien
-75,Dakar,Haut-Dahomey
-76,Djibouti,Haut-Laos
-77,Dori,Haut-Oubangui
-78,Europe,Haut-Sénégal
-79,Grand-Bassam,Indo-Chine
-80,Guadeloupe,Janeiro
-81,Guinée,Lao-Kay
-82,Guyane,Laokay
-83,Guyane française,Madagascar
-84,Hanoi,Majunga
-85,Hanoi,Malgaches
-86,Hué,Marquises
-87,Inde,Mayotte
-88,Japon,Mong-Tseu
-89,Kampot,Mongtzeu
-90,Kati,Mongtzé
-91,Kayes,My-Tho
-92,Labé,Nhatrang
-93,Lagos,Nouvelle-Galles
-94,Laos,Océanie
-95,Liptako,Orizaba
-96,Loango,Ouossou
-97,Martinique,Pak-Hoi
-98,Mauritanie,Pak-Hoi
-99,Mexique,Pak-Hoi
-100,Miquelon,Perse
-101,Niger,Phu-Lang-Thuong
-102,Nouméa,Ping-Shiang
-103,Oubangui,Port
-104,Philippines,Rio
-105,Pondichéry,Samoa
-106,Porto,Saïgon
-107,Rufisque,Setchouen
-108,Réunion,Somalis
-109,Saigon,Soudan français
-110,Saint-Louis,Surra
-111,Saint-Philippe,Tahiti
-112,Shanghai,Tamatave
-113,Soudan,Tampico
-114,Sénégal,Tananarive
-115,Tagant,Thaï-Binh
-116,Tchad,Tidjikdja
-117,Chengdu,Yen-Bay
-118,Chengdu,delta Tonkinois
-119,Timbo,lac Tchad.
-120,Togo,île
-121,Tombouctou,île de Saint-Barthélémy
-122,Tonkin,île de Saint-Martin
-123,Vinh,île de la Réunion
-124,Wallis,îles Saint-Pierre
-125,Yunnan,Binh-Thuan
-126,Yunnan,Yang-Tsé
-127,Yunnan,6.91971116956954e-310
-128,Yunnan,6.9197111695126e-310
-129,Zinder,6.91971097682544e-310
-130,Côte d'Ivoire,6.9197109768349e-310
-131,Nouméa,6.9197111826192e-310
-132,Ogooué,6.9197110098211e-310
+51,Méditerranée,Binh-Thuan
+52,Nouméa,Yang-Tsé
+53,Ogooué,Afrique occidentale française
+54,Abyssinie,Androy
+55,Afrique,Anjouan
+56,Amérique,Antsirane
+57,Antilles,Bahr-el-Ghazal
+58,Baoulé,Bambaras
+59,Barbade,Bras-de-Pontho
+60,Battambang,Bridgetown
+61,Bengale,Choquan
+62,Bokoro,Congo français
+63,Cambodge,Croyances
+64,Canton,Côte-d'Ivoire
+65,Cayenne,Dahomey
+66,Chandernagor,Fouta-Djallon
+67,Cholon,Grande-Comore
+68,Conakry,Guinée Française
+69,Congo,Hatien
+70,Constantine,Haut-Laos
+71,Dori,Haut-Oubangui
+72,Europe,Haut-Sénégal
+73,Grand-Bassam,Janeiro
+74,Guadeloupe,Lao-Kay
+75,Guinée,Laokay
+76,Guyane,Majunga
+77,Guyane française,Malgaches
+78,Hanoi,Marquises
+79,Hué,Mayotte
+80,Kampot,Mong-Tseu
+81,Kati,Mongtzeu
+82,Kayes,Mongtzé
+83,Labé,My-Tho
+84,Lagos,Nhatrang
+85,Laos,Nouvelle-Galles
+86,Liptako,Océanie
+87,Martinique,Orizaba
+88,Mauritanie,Ouossou
+89,Mexique,Pak-Hoi
+90,Miquelon,Perse
+91,Niger,Phu-Lang-Thuong
+92,Oubangui,Ping-Shiang
+93,Philippines,Port
+94,Pondichéry,Rio
+95,Porto,Samoa
+96,Rufisque,Setchouen
+97,Réunion,Somalis
+98,Saigon,Soudan français
+99,Saint-Louis,Surra
+100,Saint-Philippe,Tahiti
+101,Shanghai,Tamatave
+102,Tagant,Tampico
+103,Tchad,Tananarive
+104,Chengdu,Thaï-Binh
+105,Timbo,Tidjikdja
+106,Togo,Yen-Bay
+107,Tombouctou,delta Tonkinois
+108,Vinh,lac Tchad.
+109,Wallis,île de Saint-Barthélémy
+110,Yunnan,île de Saint-Martin
+111,Zinder,île de la Réunion
+112,6.9238480594031e-310,îles Saint-Pierre

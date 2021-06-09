@@ -68,27 +68,27 @@ def Extract_longlat_IREL (url):
     Coordonnees = "".join([coord.text for coord in soup.find_all("span", {"id":"coordonneesGPS"})])
     return Coordonnees
 
-def Extract_longlat_WikiData_all (List_Q_code):
+def Extract_longlat_WikiData (List_Q_code,output_path):
     """Extraire les coordonnées géographiques d'un lieu sur la base WikiData.
         NB: nous savons que WikiData offre de bien plus grande possiblités en ayant 
         recours à SQL mais nous n'avons pas eu le temps de nous y former.
     """
     list_lat=[]
     list_long=[]
-    
+    list_noCoord =[]
+
     for Q_code in List_Q_code:
         if type(Q_code) == float:
-            list_lat.append(None)
-            list_long.append(None)
+            print("est nan : ",Q_code)
+            list_lat.append("0")
+            list_long.append("0")
         else:
             q_dict = get_entity_dict_from_api(Q_code)
 
-
             if "P625"in q_dict["claims"] : #Si l'entité a des coordonnées
                 
-                try:#Réponse à un message d'erreur "KeyError: 'datavalue' python"
-                    x = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
-
+                if 'datavalue' in q_dict["claims"]["P625"][0]["mainsnak"]: #Si on a "datatype" et non "datavalue" 
+                    
                     #Latitude
                     q_latitude = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
                     list_lat.append(q_latitude)
@@ -96,70 +96,34 @@ def Extract_longlat_WikiData_all (List_Q_code):
                     #Longitude:
                     q_longitude= q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['longitude']
                     list_long.append(q_longitude)
+                else:
+                    print("N'a pas de coordonnées  : ",Q_code)
+                    list_noCoord.append(Q_code)
+                    list_lat.append("0")
+                    list_long.append("0") 
 
-                except KeyError:
-                    pass
-            else:
-                list_lat.append(None)
-                list_long.append(None) 
-
-    #Vérifier la taille des listes pour se prémunir d'un 
-    print("Avant correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
-    
-    #Ily a une différence de taille entre list_long/list_lat et List_Q_code     
-    list_long=list_long.append("0")
-    list_lat=list_lat.append("0")
-    
-#     print("Après correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
-    
-    # #création d'un df qui rassemble toutes les infos voulues et que l'on pourra merge par Q_code :
-    df=pd.DataFrame({"Q_code":List_Q_code,"latitude":list_lat,"longitude":list_long})
-    return df    
-    
-def Extract_longlat_WikiData (List_Q_code):
-    """Extraire les coordonnées géographiques d'un lieu sur la base WikiData.
-        NB: nous savons que WikiData offre de bien plus grande possiblités en ayant 
-        recours à SQL mais nous n'avons pas eu le temps de nous y former.
-    """
-    list_lat=[]
-    list_long=[]
-    
-    for Q_code in List_Q_code:
-        if type(Q_code) == float:
-            list_lat.append(None)
-            list_long.append(None)
-        else:
-            q_dict = get_entity_dict_from_api(Q_code)
-
-
-            if "P625"in q_dict["claims"] : #Si l'entité a des coordonnées
-
-                #Latitude
-                q_latitude = q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['latitude']
-                list_lat.append(q_latitude)
-
-                #Longitude:
-                q_longitude= q_dict["claims"]["P625"][0]["mainsnak"]['datavalue']['value']['longitude']
-                list_long.append(q_longitude)
+                    
 
             else:
-                list_lat.append(None)
-                list_long.append(None) 
+                print("n'a pas de coordonnées  : ",Q_code)
+                list_noCoord.append(Q_code)
+                list_lat.append("0")
+                list_long.append("0") 
 
     #Vérifier la taille des listes pour se prémunir d'un 
-    print("Avant correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
-    
-    #Ily a une différence de taille entre list_long/list_lat et List_Q_code     
-    list_long=list_long.append("0")
-    list_lat=list_lat.append("0")
-    
-#     print("Après correction. \nliste latitude : ",len(list_lat),"\nliste longitude : ",len(list_long),"\nList_Q_code : ",len(List_Q_code))
-    
-    # #création d'un df qui rassemble toutes les infos voulues et que l'on pourra merge par Q_code :
-    df=pd.DataFrame({"Q_code":List_Q_code,"latitude":list_lat,"longitude":list_long})
-    return df    
-    
+    print("\nTaille de chaque liste: \n  Liste latitude : ",len(list_lat),"\n  Liste longitude : ",len(list_long),"\n  List_Q_code : ",len(List_Q_code))
 
+    #Récupérer laliste des entités n'ayant pas de coordonnées:
+    print("\nQ_code sans coordonnées : ",list_noCoord)
+    
+    # #création d'un df qui rassemble toutes les infos voulues et que l'on pourra merge par Q_code : 
+    df=pd.DataFrame({"Q_code":List_Q_code,"latitude":list_lat,"longitude":list_long})
+    
+    #Exportation du df :
+    print("\n CSV créé ! Chemin vers csv : ",output_path)
+    df.to_csv(output_path,index=False)
+    #Return :
+    return df 
 
 ########### NETTOYAGE DES DATAFRAMES ! #########
 

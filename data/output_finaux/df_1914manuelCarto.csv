@@ -1,4 +1,4 @@
-GPH_code,NAME,start_year,end_year,GPH_status,sovereign_GPH_code,SovereignGPH_code
+GPH_code,NAME,start_year,end_year,GPH_status,sovereign&dependency_GPH_code,Dependency_GPH_code
 530.0,Abyssinia,1898.0,1936.0,Sovereign,530.0,530.0
 681.0,Aden,1838.0,1962.0,Colony of,200.0,
 700.0,Afghanistan,1879.0,1919.0,Protectorate of,200.0,

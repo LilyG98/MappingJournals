@@ -43,8 +43,8 @@ def ListEntities2df (df,revue,colname):
     
     dfent = pd.DataFrame(listents)#Retour à la liste de départ que l'on remplace par les données nettoyées
     dfent_group = dfent.groupby(by=0).sum()#Grouper les ents
-    output_path = "./desambiguisation/Revue_ParEntityLabel/"+revue+"/"+revue+colname+".csv"
-    dfent_group.to_csv(output_path)
+    output_path = "./output/2-Exploration_GPH-IREL/Revue_ParEntityLabel/"+revue+"/"+revue+colname+".csv"
+    dfent_group.to_csv(output_path,index=False)
     print("fichier créé dans",output_path)
     print("Output:liste des entités",colname,"\n")
     return dfent_group.index.values.tolist()

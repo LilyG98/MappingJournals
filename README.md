@@ -1,25 +1,21 @@
 # MappingJournals
-Ce repository a été créé dans le cadre d'un travail effectué pour le séminaire TAIS de l'EHESS
-
-===================================================================================================
+Ce repository a été créé dans le cadre d'un travail effectué pour le séminaire TAIS de l'EHESS. 
 
 # Objectifs du travail 
 En travaillant sur des revues médicales en situation coloniale, les contributeurs aux revues 
 
 Pour cela nous avons réalisé une carte 
 
-===================================================================================================
 # Organisation du repository
 
 ## 
-> ``
+> `carto` : les cartes créées grâce au projet QGIS
 > `data` : L'ensemble des Jupyer Notebooks et données m'ayant permis de créer la carte
 > `export` : les exports `shapefile` de la carte QGIS
+> `LGrumbach-Rendu-TAIS.qgz` : Projet QGIS de notre rendu
 
 
-===================================================================================================
 # Sources utilisées 
-
 
 
 | Nom                             	| Acteurs produisant la BDD       	| Intérêt<br>de la base de données                                                        	| Désavantages                                                                                	| Utilisé pour                                                    	|

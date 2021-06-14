@@ -20,10 +20,6 @@ Pour cela nous avons réalisé une carte
 ===================================================================================================
 # Sources utilisées 
 
-- [x ] <a href="https://github.com/medialab/GeoPolHist.git"> GeoPolHist </href> : 
-- [x ] <a href="https://github.com/medialab/GeoPolHist.git"> GeoPolHist </href> : Base de données historique du médialab. 
-- [x ] <a href = "https://www.geonames.org" >Geonames </href> : 
-
 <span>llllll</span> & Nom de la BDD & Acteur produisant la BDD & Intérêt
 de la base de données & Désavantages & Utilisé pour\
 0 & GeoPolHist\\n\\nTaille :1228 & Médialab – Sciences Po & Base de

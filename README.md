@@ -9,14 +9,13 @@ Pour cela nous avons réalisé une carte
 # Organisation du repository
 
 ## 
-* `./carto` : les cartes créées grâce au projet QGIS
-* `./data` : L'ensemble des Jupyer Notebooks et données m'ayant permis de créer la carte
+* `carto` : les cartes créées grâce au projet QGIS
+* `data` : L'ensemble des Jupyer Notebooks et données m'ayant permis de créer la carte
   * Les cinq jupyter notebooks du projet ainsi que le module associé
   * Les dossiers contenant les principales sources qui m'ont permises de créer la carte : `GeoPolHist-202103` ; `HistNatBoundaries` ; `IREL`
   * Les outputs de mes Notebooks (ayant majoritairement servis comme input entre Norbooks) ainsi que les dossiers contenant les input provenant d'autres sources
-* `./export` : les exports `shapefile` de la carte QGIS
-* `./LGrumbach-Rendu-TAIS.qgz` : Projet QGIS de notre rendu
-./export
+* `export` : les exports `shapefile` de la carte QGIS
+* `LGrumbach-Rendu-TAIS.qgz` : Projet QGIS de notre rendu
 
 # Sources utilisées 
 

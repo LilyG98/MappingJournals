@@ -16,7 +16,7 @@ Pour cela nous avons réalisé une carte
   * Les outputs de mes Notebooks (ayant majoritairement servis comme input entre Norbooks) ainsi que les dossiers contenant les input provenant d'autres sources
 * `./export` : les exports `shapefile` de la carte QGIS
 * `./LGrumbach-Rendu-TAIS.qgz` : Projet QGIS de notre rendu
-
+./export
 
 # Sources utilisées 
 

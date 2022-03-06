@@ -8,6 +8,15 @@ Par ce rendu, nous avons souhaité considérer la répartition géographique des
 
 Nous avons concentré notre étude sur les titres de contributions originales des années s’écoulant de 1898 à 1908 comme échantillon pour mettre en place une méthodologie de cartographie des contributions faites aux revues. Si cette période débute avec la création de l’une d’entre elles (les AHMC), elle se termine par la création de la Société de pathologie exotique dont nous étudions aussi le Bulletin dans le cadre de notre mémoire. Cette société a eu pour effet de capter les principaux médecins coloniaux et de la marine ainsi que de promouvoir la recherche bactériologique et en parasitologie, introduisant alors un nouveau rapport au terrain.
 
+## Démarche
+* NLP : Récupération dans chaque article de revue des entités nommées géographiques cartographiables : les Geopolitical Entities (GPE) et Location (LOC).
+>Les GPE correspondent à l’ensemble des noms de lieux dépendant d’une entité apparentée à une administration (pays, région, province, ville, village etc.). 
+>Les LOC désignent pour leur part les entités nommées «purement» géographiques, n’étant pas par le résultat d’une intervention humaine (cours d’eau, montagne, mer, etc.).
+* Reconstituer une carte du monde reflétant les frontières d’époque, notamment entre États souverains et territoires dépendants. (cf `sources utilisées`)
+* Désambiguisation des entités nommées géopolitiques et géographiques
+* Extraction et attribution des coordonnées géographiques correspondant à chaque GPE et LOC
+* Cartographie à proprement dit (symboles etc.)
+
 ## Organisation du repository
 
 * `carto` : les cartes créées grâce au projet QGIS

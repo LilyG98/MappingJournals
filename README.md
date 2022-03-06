@@ -10,8 +10,8 @@ Nous avons concentré notre étude sur les titres de contributions originales de
 
 ## Démarche
 * NLP : Récupération dans chaque article de revue des entités nommées géographiques cartographiables : les Geopolitical Entities (GPE) et Location (LOC).
->Les GPE correspondent à l’ensemble des noms de lieux dépendant d’une entité apparentée à une administration (pays, région, province, ville, village etc.). 
->Les LOC désignent pour leur part les entités nommées «purement» géographiques, n’étant pas par le résultat d’une intervention humaine (cours d’eau, montagne, mer, etc.).
+  * Les GPE correspondent à l’ensemble des noms de lieux dépendant d’une entité apparentée à une administration (pays, région, province, ville, village etc.). 
+  * Les LOC désignent pour leur part les entités nommées «purement» géographiques, n’étant pas par le résultat d’une intervention humaine (cours d’eau, montagne, mer, etc.).
 * Reconstituer une carte du monde reflétant les frontières d’époque, notamment entre États souverains et territoires dépendants. (cf `sources utilisées`)
 * Désambiguisation des entités nommées géopolitiques et géographiques
 * Extraction et attribution des coordonnées géographiques correspondant à chaque GPE et LOC

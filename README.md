@@ -2,9 +2,11 @@
 Ce repository a été créé dans le cadre d'un travail effectué pour le séminaire TAIS de l'EHESS. 
 
 ## Objectifs du travail 
-En travaillant sur des revues médicales en situation coloniale, les contributeurs aux revues 
 
-Pour cela nous avons réalisé une carte 
+
+Par ce rendu, nous avons souhaité considérer la répartition géographique des contributions de deux revues (Les "Annales d'hygiène et de médecine coloniale" et les "Archives de médecine navale")afin d’en saisir les territoires d’intérêt. En effet, la publication dans une revue officielle de mémoires originaux et de rapports effectués à l’administration nous renseigne sur ce que les autorités ministérielles estimaient comme pertinent pour la gouvernance des territoires.
+
+Nous avons concentré notre étude sur les titres de contributions originales des années s’écoulant de 1898 à 1908 comme échantillon pour mettre en place une méthodologie de cartographie des contributions faites aux revues. Si cette période débute avec la création de l’une d’entre elles (les AHMC), elle se termine par la création de la Société de pathologie exotique dont nous étudions aussi le Bulletin dans le cadre de notre mémoire. Cette société a eu pour effet de capter les principaux médecins coloniaux et de la marine ainsi que de promouvoir la recherche bactériologique et en parasitologie, introduisant alors un nouveau rapport au terrain.
 
 ## Organisation du repository
 
